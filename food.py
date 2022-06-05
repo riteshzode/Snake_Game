@@ -3,7 +3,7 @@ from turtle import Turtle
 
 SHAPE = "circle"
 COLOR = "blue"
-l2 = ["red", "orange", "yellow", "green", "blue", "purple"]
+# l2 = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 
 class Food(Turtle):
