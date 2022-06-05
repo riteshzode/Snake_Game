@@ -10,7 +10,8 @@ class Food(Turtle):
     def __init__(self):
         super().__init__()
         self.shape(SHAPE)
-        self.shapesize(1, 1)
+        # this is a size of a circle(food)
+        self.shapesize(0.9, 0.9)
         self.penup()
         self.color(COLOR)
         self.speed("fastest")
