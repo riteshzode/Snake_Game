@@ -6,11 +6,9 @@ UP = 90
 DOWN = 270
 RIGHT = 0
 LEFT = 180
-COLOR = "white"
+COLOR = "red"
 SHAPE = "square"
 
-
-# l2 = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 class Snake:
 
@@ -33,13 +31,10 @@ class Snake:
 
     def extend(self):
         self.add_segment(self.segments[-1].position())
-        # we just have to add new snake on last position of list
 
     def move(self):
         for j in range(len(self.segments) - 1, 0, -1):
-            x = self.segments[j - 1].xcor()
-            y = self.segments[j - 1].ycor()
-            self.segments[j].goto(x, y)
+            self.segments[j].goto(self.segments[j - 1].position())
         self.head.forward(MOVE_DISTANCE)
 
     def snake_reset(self):
